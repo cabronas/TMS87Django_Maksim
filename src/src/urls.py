@@ -18,9 +18,15 @@ from django.contrib import admin
 from django.urls import path
 
 from django_01.views import *
+from django_02.views import tp
+from django_03.views import *
+from django_04.views import login
 from test_00.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', dt, name='dt')
+    path('two_pow/<int:number>', tp, name='dt'),
+    path('word/<iword>', word, name='word'),
+    path('word2/<iword>', word2, name='word2'),
+    path('login', login, name='login')
 ]
