@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block title %} ALL GROUPS MENU {% endblock %}
+{% block content %}
+    <table border="1">
+    <tr>
+        <td>Students of group</td>
+        <td>{{ gr_name }}</td>
+    </tr>
+    {% for student in std %}
+    <tr>
+        <td>
+            {{ student.name }}
+        </td>
+            <td>
+            {{ student.lastname }}
+        </td>
+    </tr>
+    {%  endfor %}
+    </table>
+{% endblock %}
