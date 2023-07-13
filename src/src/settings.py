@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django_extensions',
     'test_00',
     'django_09_end',
-    'school'
+    'school',
+    'catdogs',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'src.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['django_09_end.templates', 'school.templates'],
+        'DIRS': ['django_09_end.templates', 'school.templates', 'catdogs.templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

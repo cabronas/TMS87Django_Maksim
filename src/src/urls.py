@@ -31,4 +31,5 @@ urlpatterns = [
     path('login', login, name='login'),
     path('django_09_end/', include('django_09_end.urls')),
     path('school/', include('school.urls')),
+    path('', include('catdogs.urls'))
 ]
