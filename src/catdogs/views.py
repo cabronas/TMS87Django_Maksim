@@ -42,5 +42,5 @@ def spam(request):
 
 
 def spam_sent(request):
-    send_mail(subject="ANIMALS", message: "kek")
+    send_mail(subject="ANIMALS", message= "kek")
     return render(request, 'spam_sent.html')
