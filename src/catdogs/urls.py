@@ -6,4 +6,5 @@ from school.views import *
 
 urlpatterns = [
     path('', CD , name='CD'),
+    path('cdsave', cdSave, 'cdSave')
 ]

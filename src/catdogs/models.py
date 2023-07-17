@@ -8,4 +8,5 @@ class AImage(models.Model):
                             max_length=5,
                             choices=[('cat', 'Cat'), ('dog', 'Dog')])
     date_of_creation = models.DateField(auto_now_add=True)
-    type = models.CharField(default='png',max_length=5, choices=[('png', 'PNG'), ('gif', 'GIF'), ('jpg', 'JGP'), ('jpeg', 'JPEG')])
+    type = models.CharField(default='png', max_length=5,
+                            choices=[('png', 'png'), ('gif', 'gif'), ('jpg', 'jpg'), ('jpeg', 'jpeg')])
