@@ -1,4 +1,5 @@
 import requests
+from django.core.mail import send_mail
 from django.shortcuts import render
 
 from catdogs.models import AImage
@@ -34,3 +35,12 @@ def cdSave(request):
                               type=request.session['data_for_session']['type'])
         con = {'url': request.session['data_for_session']['url']}
     return render(request, 'saved.html', context=con)
+
+
+def spam(request):
+    return render(request, 'spam.html')
+
+
+def spam_sent(request):
+    send_mail(subject="ANIMALS", message: "kek")
+    return render(request, 'spam_sent.html')

@@ -1,7 +1,9 @@
 {% extends "main1.html" %}
 {% block title %} CAT&DOGS {% endblock %}
 {% block content %}
-SAVED
-    <tr></tr>
+    <form action="{% url 'spam' %}" method = "POST">
+    {% csrf_token %}
+    <button type="submit" name="spam" class ="btn btn-outline-warning"> send spam </button>
     <img class="mx-auto d-block" src="{{ url }}">
+    </form>
 {% endblock %}
