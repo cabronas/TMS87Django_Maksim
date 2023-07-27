@@ -4,6 +4,6 @@
     <form action="{% url 'spam' %}" method = "POST">
     {% csrf_token %}
     <button type="submit" name="spam" class ="btn btn-outline-warning"> send spam </button>
-    <img class="mx-auto d-block" src="{{ url }}">
+    <img class="mx-auto d-block" src="{{ url }}" height="200px" width="200px">
     </form>
 {% endblock %}

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+from src.topsecret import EMAIL_HOST_PASSWORD1
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -125,5 +127,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "cabronian123@gmail.com"
-EMAIL_HOST_PASSWORD = "tocyxkrwugnqppix"
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD1
 EMAIL_USE_SSL = True
+# "tocyxkrwugnqppix"
