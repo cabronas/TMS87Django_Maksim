@@ -129,4 +129,3 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = "cabronian123@gmail.com"
 EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD1
 EMAIL_USE_SSL = True
-# "tocyxkrwugnqppix"
