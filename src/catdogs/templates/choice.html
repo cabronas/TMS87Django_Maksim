@@ -1,11 +1,22 @@
 {% extends "main1.html" %}
 {% block title %} CAT&DOGS {% endblock %}
 {% block content %}
-    <form action="{% url 'CD' %}" method = "POST">
+<form action="{% url 'CD' %}" method="POST">
     {% csrf_token %}
-        <button type="submit" name="cats" class ="btn btn-outline-warning"> CATS
-        </button>
-        <button type="submit" name="dogs" class ="btn btn-outline-warning"> DOGS
-        </button>
-    </form>
+    <button type="submit" name="cats" class="btn btn-outline-warning"> CATS
+    </button>
+    <button type="submit" name="dogs" class="btn btn-outline-warning"> DOGS
+    </button>
+</form>
+<hr size="20px">
+<form action="{% url 'pet_filter' %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+        <button type="submit" name="show" class="btn btn-outline-warning"> SHOW SAVED
+    </button>
+    <!--        <button type="submit" name="cats" class ="btn btn-outline-warning"> CATS-->
+    <!--        </button>-->
+    <!--        <button type="submit" name="dogs" class ="btn btn-outline-warning"> DOGS-->
+    <!--        </button>-->
+</form>
 {% endblock %}
