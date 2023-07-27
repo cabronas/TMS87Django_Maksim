@@ -3,7 +3,7 @@
 {% block content %}
     <form action="{% url 'spam_sent' %}" method = "POST">
     {% csrf_token %}
-    <input type="email">
+    <input type="email" name="mail">
     <input type="submit" name = "spammer">
     </form>
 {% endblock %}

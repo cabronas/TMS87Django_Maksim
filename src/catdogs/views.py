@@ -1,8 +1,11 @@
+import django.forms
 import requests
 from django.core.mail import send_mail
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from catdogs.models import AImage
+from src.settings import EMAIL_HOST_USER
 
 
 # Create your views here.
@@ -42,5 +45,8 @@ def spam(request):
 
 
 def spam_sent(request):
-    send_mail(subject="ANIMALS", message= "kek")
+    request.session['mail'] = request.POST.get('mail')
+    send_mail(request.session['data_for_session']['kind'], request.session['data_for_session']['url'], EMAIL_HOST_USER,
+              [request.session['mail']])
     return render(request, 'spam_sent.html')
+# tocyxkrwugnqppix
