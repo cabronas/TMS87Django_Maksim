@@ -1,9 +1,0 @@
-{% extends "main1.html" %}
-{% block title %} CAT&DOGS {% endblock %}
-{% block content %}
-    <form action="{% url 'spam_sent' %}" method = "POST">
-    {% csrf_token %}
-    <input type="email" name="mail">
-    <input type="submit" name = "spammer">
-    </form>
-{% endblock %}
