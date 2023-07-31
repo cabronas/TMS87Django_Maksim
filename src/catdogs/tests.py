@@ -11,7 +11,7 @@ from catdogs.models import AImage
 
 
 class CD_test(TestCase):
-
+    fixtures = ['kek.json']
     def test_cd_get(self):
         request = self.client.get(reverse('CD'))
         self.assertEqual(request.status_code, 200)
@@ -41,11 +41,12 @@ class CD_test(TestCase):
         self.assertTemplateUsed(request, template_name='spam_sent.html')
 
     def test_save(self):
+        self.assertEqual(AImage.objects.count(), 43)
         self.client.post(reverse('CD'), {'cats': 'true'})
         request = self.client.post(reverse('cdSave'))
         self.assertEqual(request.status_code, 200)
         self.assertTemplateUsed(request, template_name='saved.html')
-        self.assertEqual(AImage.objects.count(), 1)
+        self.assertEqual(AImage.objects.count(), 44)
 
     # def test_zero(self):
     #     self.skipTest("a")
