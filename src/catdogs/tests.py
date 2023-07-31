@@ -40,3 +40,9 @@ class CD_test(TestCase):
         request = self.client.post(reverse('cdSave'))
         self.assertEqual(request.status_code, 200)
         self.assertTemplateUsed(request, template_name='saved.html')
+
+    # def test_zero(self):
+    #     self.skipTest("a")
+        # with self.assertRaises(ZeroDivisionError):
+        #     request = self.client.get(reverse('divide_zero_test'))
+        # request = self.client.get(reverse('not_divide_zero_test'))

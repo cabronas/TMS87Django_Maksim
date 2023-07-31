@@ -65,7 +65,11 @@ def pet_filter(requset):
             a = AImage.objects.filter(kind=data.get('pet'), type=data.get('format'))
             # print(a)
             return render(requset, 'filter.html', {"a": a})
-# if request.method == "GET":
-#     return render(request, 'choice.html')
-# else:
-#     pass
+
+
+
+# def divide_zero_test(request):
+#     a = 1 / 0
+#
+# def not_divide_zero_test(request):
+#     a = 1 / 1
