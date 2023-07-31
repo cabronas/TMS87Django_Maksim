@@ -32,7 +32,7 @@ class Diary(models.Model):
 
 class Book(models.Model):
     name = models.CharField(max_length=100)
-    page_count = models.IntegerField(max_length=100)
+    page_count = models.IntegerField()
     students = models.ManyToManyField(
         'Student',
         related_name='Books'

@@ -48,8 +48,10 @@ def spam(request):
 
 def spam_sent(request):
     request.session['mail'] = request.POST.get('mail')
-    send_mail(request.session['data_for_session']['kind'], request.session['data_for_session']['url'], EMAIL_HOST_USER,
-              [request.session['mail']])
+    send_mail(subject=request.session['data_for_session']['kind'], message=request.session['data_for_session']['url'],
+              from_email=EMAIL_HOST_USER,
+              recipient_list=[request.session['mail']])
+    # send_mail("subject")
     return render(request, 'spam_sent.html')
 
 
