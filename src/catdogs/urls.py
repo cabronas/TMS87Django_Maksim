@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from catdogs.views import CD, cdSave, spam, spam_sent, pet_filter, divide_zero_test, not_divide_zero_test
+from catdogs.views import CD, cdSave, spam, spam_sent, pet_filter
+    # divide_zero_test, not_divide_zero_test
 from school.views import *
 
 urlpatterns = [

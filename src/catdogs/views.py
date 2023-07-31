@@ -29,6 +29,8 @@ def CD(request):
             filetype = pic["message"].split('.')[-1]
             session_data = {"url": pic["message"], "kind": "dog", "type": filetype}
             # AImage.objects.create(url=pic["message"], kind="cat", type=filetype)
+        else:
+            return HttpResponse("error")
         request.session['data_for_session'] = session_data
         return render(request, 'pet.html', context=con)
 
@@ -55,8 +57,6 @@ def spam_sent(request):
     return render(request, 'spam_sent.html')
 
 
-# tocyxkrwugnqppix
-
 def pet_filter(requset):
     if requset.method == "POST":
         form = PetsFilterForm(requset.POST)
@@ -65,8 +65,6 @@ def pet_filter(requset):
             a = AImage.objects.filter(kind=data.get('pet'), type=data.get('format'))
             # print(a)
             return render(requset, 'filter.html', {"a": a})
-
-
 
 # def divide_zero_test(request):
 #     a = 1 / 0
